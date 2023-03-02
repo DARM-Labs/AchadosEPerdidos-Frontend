@@ -55,6 +55,8 @@ Segue abaixo o fluxo da etapa de code review
 - Rafael Castro - Desenvolvedor 
 - Julia Evangelisa - Q&A
 - Paulo Vinicius - Q&A
+- Raul Pereira - UX/UI
+
 
 ## Links úteis
 

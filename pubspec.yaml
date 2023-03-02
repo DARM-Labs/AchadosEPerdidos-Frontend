@@ -1,0 +1,53 @@
+name: achadoseperdidosifce
+description: A new Flutter project.
+publish_to: 'none' 
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  
+  get:
+  http:
+  image_picker: ^0.8.6+1
+  brasil_fields: ^1.10.0
+  google_fonts: ^4.0.1
+  material_design_icons_flutter: ^6.0.7096
+
+  cupertino_icons: ^1.0.2
+
+  firebase_storage: ^11.0.11
+  uuid: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: "^0.11.0"
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+
+
+flutter_icons:
+  image_path: "assets/icons/logo_icon.png"
+  adaptive_icon_background: "#ffffff"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  web:
+    generate: true
+    image_path: "assets/icons/logo_icon.png"
+    background_color: "#ffffff"

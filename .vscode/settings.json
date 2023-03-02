@@ -1,0 +1,8 @@
+{
+    "workbench.startupEditor": "welcomePage",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.tree.renderIndentGuides": "onHover",
+    "dart.showDevToolsDebugToolBarButtons": true,
+    "liveshare.showInStatusBar": "always",
+    "editor.scrollbar.scrollByPage": false
+}
