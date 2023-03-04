@@ -57,4 +57,15 @@ List<FoundObjectModel> foundObjects = [
     date: DateFormat("dd/MM/yyyy").format(DateTime.now()),
     delivered: true,
   ),
+  FoundObjectModel(
+    id: "6d",
+    name: "Garrafa Azul Marinho",
+    imageUrl:
+        "https://images.tcdn.com.br/img/img_prod/608770/garrafa_termica_hydra_azul_marinho_500ml_pacco_112147_1_facb11b88b0169264226576105f39b3c.jpg",
+    location: "Laboratório de Redes",
+    description:
+        "Garrafa Térmica Hydra Azul Marinho 500ml - Pacco encontrada do laboratório de redes.",
+    date: DateFormat("dd/MM/yyyy").format(DateTime.now()),
+    delivered: true,
+  ),
 ];
