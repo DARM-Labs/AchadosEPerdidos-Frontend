@@ -1,3 +1,4 @@
+import 'package:achadoseperdidosifce/app/data/provider/data_objects.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/drawer_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/object_vertical_widget.dart';
 import 'package:flutter/material.dart';
@@ -41,8 +42,10 @@ class HomePage extends GetView<HomeController> {
                 child: ListView.separated(
                     padding: const EdgeInsets.only(top: 8, left: 15),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const ObjectVerticalWidget(),
-                    itemCount: 5,
+                    itemBuilder: (_, index) => ObjectVerticalWidget(
+                        object: foundObjects[index],
+                        tagHero: foundObjects[index].id),
+                    itemCount: foundObjects.length,
                     separatorBuilder: (context, index) =>
                         const Padding(padding: EdgeInsets.all(16))),
               ),
@@ -60,8 +63,11 @@ class HomePage extends GetView<HomeController> {
                 child: ListView.separated(
                     padding: const EdgeInsets.only(top: 8, left: 15),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const ObjectVerticalWidget(),
-                    itemCount: 5,
+                    itemBuilder: (context, index) => ObjectVerticalWidget(
+                          object: foundObjects[index],
+                          tagHero: foundObjects[index].id * 2,
+                        ),
+                    itemCount: foundObjects.length,
                     separatorBuilder: (context, index) =>
                         const Padding(padding: EdgeInsets.all(16))),
               ),
