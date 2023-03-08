@@ -11,17 +11,17 @@ class LosesObjectsPage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Objetos perdidos"),
-          actions: [
-            !GetPlatform.isAndroid
-                ? IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      MdiIcons.plus,
-                      size: 30,
-                    ))
-                : Container()
-          ],
+          title: const Text("Objetos perdidos"),
+          // actions: [
+          //   !GetPlatform.isAndroid
+          //       ? IconButton(
+          //           onPressed: () {},
+          //           icon: Icon(
+          //             MdiIcons.plus,
+          //             size: 30,
+          //           ))
+          //       : Container()
+          // ],
         ),
         drawer: DrawerWidget(),
         floatingActionButton: GetPlatform.isAndroid

@@ -27,6 +27,7 @@ class LoginPage extends GetView<LoginController> {
               LogoWidget(),
               const Padding(padding: EdgeInsets.all(10)),
               TextFieldWidget(
+                // key: const Key("text-field"),
                 label: 'Digite seu e-mail',
                 hintText: 'E-mail',
                 onChanged: (value) => controller.email(value),
@@ -37,6 +38,7 @@ class LoginPage extends GetView<LoginController> {
               ),
               const Padding(padding: EdgeInsets.all(5)),
               TextFieldWidget(
+                // key: const Key("text-field-widget"),
                 label: 'Digite sua senha',
                 hintText: '∗∗∗∗∗∗∗∗',
                 security: true,

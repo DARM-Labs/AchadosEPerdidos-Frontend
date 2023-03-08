@@ -24,20 +24,22 @@ class PhotoUserButtonWidget extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            backgroundColor: Get.theme.colorScheme.primary,
-            foregroundColor: Get.theme.colorScheme.onPrimary,
-            maxRadius: 55,
+            backgroundColor: const Color(0xFF5FD05E).withOpacity(0.3),
+            foregroundColor: Get.theme.colorScheme.onPrimary.withOpacity(0.5),
+            maxRadius: 48,
             foregroundImage:
                 urlPhoto != "" ? Image.network(urlPhoto!).image : null,
             child: const Icon(
               MdiIcons.cameraPlusOutline,
-              size: 50,
+              size: 40,
             ),
           ),
-          const Padding(padding: EdgeInsets.all(5)),
-          Text(
-            title!,
-            style: GoogleFonts.poppins(fontSize: 13),
+          Padding(
+            padding: const EdgeInsets.only(top: 5),
+            child: Text(
+              title!,
+              style: GoogleFonts.poppins(fontSize: 13, color: Colors.white),
+            ),
           ),
         ],
       ),

@@ -18,7 +18,7 @@ class FoundsObjectsWidget extends StatelessWidget {
           "Objetos Postados",
         ),
       ),
-      drawer: const DrawerWidget(),
+      drawer: DrawerWidget(),
       floatingActionButton: FloatingActionButton(
           child: const Icon(MdiIcons.plus), onPressed: () {}),
       body: SafeArea(

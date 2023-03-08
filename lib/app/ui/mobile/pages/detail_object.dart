@@ -1,4 +1,5 @@
 import 'package:achadoseperdidosifce/app/data/model/found_object_model.dart';
+import 'package:achadoseperdidosifce/app/utils/variaveis.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,20 +10,17 @@ class DetailObject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final alturaMedia = (MediaQuery.of(context).size.height -
-        MediaQuery.of(context).padding.top -
-        AppBar().preferredSize.height);
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
-            height: alturaMedia,
+            height: Variavel.alturaDisponivel(context),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
-                  height: alturaMedia * 0.4,
+                  height: Variavel.alturaDisponivel(context) * 0.4,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(

@@ -58,13 +58,14 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          widget.label != null
-              ? Text(widget.label!,
-                  style: GoogleFonts.poppins(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ))
-              : Container(),
+          if (widget.label != null)
+            Text(
+              widget.label!,
+              style: GoogleFonts.poppins(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
           Padding(
             padding: const EdgeInsets.only(top: 10),
             child: TextFormField(

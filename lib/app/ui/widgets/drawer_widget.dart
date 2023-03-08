@@ -8,26 +8,49 @@ import '../../routes/app_routes.dart';
 import 'avatar_widget.dart';
 
 class DrawerWidget extends Drawer {
-  const DrawerWidget({super.key});
+  DrawerWidget({super.key});
 
   selectPage(String page) {
     Get.back();
     Get.toNamed(page);
   }
 
+  final _routes = [
+    Routes.HOME,
+    Routes.FOUNDS_OBJECTS,
+    Routes.LOSES_OBJECTS,
+    Routes.ABOUT,
+    Routes.LOGIN,
+  ];
+  final _icons = [
+    MdiIcons.home,
+    MdiIcons.tag,
+    MdiIcons.tagOff,
+    MdiIcons.information,
+    MdiIcons.logout,
+  ];
+  final _texts = [
+    "Início",
+    "Objetos achados",
+    "Objetos perdidos",
+    "Sobre",
+    "Sair",
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: Get.theme.colorScheme.background,
-      surfaceTintColor: Get.theme.colorScheme.onBackground,
-      child: Expanded(
-        child: ListView(children: [
-          GestureDetector(
-            onTap: () => selectPage(Routes.PROFILE),
-            child: UserAccountsDrawerHeader(
-                currentAccountPictureSize: Size.square(60),
+    return LayoutBuilder(builder: (context, constraints) {
+      return Drawer(
+        backgroundColor: Get.theme.colorScheme.background,
+        surfaceTintColor: Get.theme.colorScheme.onBackground,
+        child: ListView(
+          children: [
+            GestureDetector(
+              onTap: () => selectPage(Routes.PROFILE),
+              child: UserAccountsDrawerHeader(
+                currentAccountPictureSize: const Size.square(60),
                 margin: EdgeInsets.zero,
-                currentAccountPicture: AvatarWidget(
+                currentAccountPicture: const AvatarWidget(
                   name: "Michael",
                 ),
                 decoration: const BoxDecoration(
@@ -58,7 +81,8 @@ class DrawerWidget extends Drawer {
                                   fontSize: 13,
                                   color: Get.theme.colorScheme.onBackground),
                             ),
-                            Padding(padding: EdgeInsets.all(2)),
+                            const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 2)),
                             Text(
                               "achados",
                               style: GoogleFonts.poppins(
@@ -68,7 +92,8 @@ class DrawerWidget extends Drawer {
                             ),
                           ],
                         ),
-                        Padding(padding: EdgeInsets.all(5)),
+                        const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 5)),
                         Row(
                           children: [
                             Text(
@@ -77,7 +102,8 @@ class DrawerWidget extends Drawer {
                                   fontSize: 13,
                                   color: Get.theme.colorScheme.onBackground),
                             ),
-                            Padding(padding: EdgeInsets.all(2)),
+                            const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 2)),
                             Text(
                               "perdidos",
                               style: GoogleFonts.poppins(
@@ -90,59 +116,37 @@ class DrawerWidget extends Drawer {
                       ],
                     ),
                   ],
-                )),
-          ),
-          const Divider(
-            thickness: 0.3,
-            height: 0,
-          ),
-          ListTile(
-            onTap: () => selectPage(Routes.HOME),
-            leading: const Icon(MdiIcons.home),
-            title: const Text('Inicio'),
-          ),
-          const Divider(
-            thickness: 0.3,
-            height: 0,
-          ),
-          ListTile(
-            onTap: () => selectPage(Routes.FOUNDS_OBJECTS),
-            leading: const Icon(MdiIcons.tag),
-            title: const Text('Objetos achados'),
-          ),
-          const Divider(
-            thickness: 0.3,
-            height: 0,
-          ),
-          ListTile(
-            onTap: () => selectPage(Routes.LOSES_OBJECTS),
-            leading: const Icon(MdiIcons.tagOff),
-            title: const Text('Objetos perdidos'),
-          ),
-          const Divider(
-            thickness: 0.3,
-            height: 0,
-          ),
-          ListTile(
-            onTap: () => selectPage(Routes.ABOUT),
-            leading: const Icon(MdiIcons.information),
-            title: const Text('Sobre'),
-          ),
-          const Divider(
-            thickness: 0.3,
-            height: 0,
-          ),
-          ListTile(
-            onTap: () => selectPage(Routes.LOGIN),
-            leading: const Icon(MdiIcons.logout),
-            iconColor: Get.theme.colorScheme.error,
-            title: const Text(
-              'Sair',
+                ),
+              ),
             ),
-            textColor: Get.theme.colorScheme.error,
-          ),
-        ]),
-      ),
-    );
+            SizedBox(
+              height: constraints.maxHeight * .36,
+              child: ListView.separated(
+                itemBuilder: (context, index) {
+                  return SizedBox(
+                    height: constraints.maxHeight * .07,
+                    child: ListTile(
+                      onTap: () => selectPage(_routes[index]),
+                      leading: Icon(_icons[index]),
+                      title: Text(_texts[index]),
+                      iconColor: index != 4
+                          ? Get.theme.iconTheme.color
+                          : Get.theme.colorScheme.error,
+                      textColor:
+                          index != 4 ? null : Get.theme.colorScheme.error,
+                    ),
+                  );
+                },
+                separatorBuilder: (context, index) => const Divider(
+                  thickness: 0.3,
+                  height: 0,
+                ),
+                itemCount: 5,
+              ),
+            ),
+          ],
+        ),
+      );
+    });
   }
 }

@@ -9,7 +9,7 @@ class AboutPage extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const DrawerWidget(),
+      drawer: DrawerWidget(),
       appBar: AppBar(
         title: const Text(
           'Sobre',
