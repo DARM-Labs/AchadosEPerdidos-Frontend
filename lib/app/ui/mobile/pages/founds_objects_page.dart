@@ -1,8 +1,8 @@
 import 'package:achadoseperdidosifce/app/data/provider/data_objects.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/drawer_widget.dart';
+import 'package:achadoseperdidosifce/app/ui/widgets/floating_button_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/posted_object.dart';
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class FoundsObjectsWidget extends StatelessWidget {
   const FoundsObjectsWidget({super.key});
@@ -19,8 +19,7 @@ class FoundsObjectsWidget extends StatelessWidget {
         ),
       ),
       drawer: DrawerWidget(),
-      floatingActionButton: FloatingActionButton(
-          child: const Icon(MdiIcons.plus), onPressed: () {}),
+      floatingActionButton: const FloatingButtonWidget(),
       body: SafeArea(
         child: SizedBox(
           height: alturaMedia,

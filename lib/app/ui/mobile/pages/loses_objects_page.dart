@@ -10,23 +10,19 @@ class LosesObjectsPage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Objetos perdidos"),
-          // actions: [
-          //   !GetPlatform.isAndroid
-          //       ? IconButton(
-          //           onPressed: () {},
-          //           icon: Icon(
-          //             MdiIcons.plus,
-          //             size: 30,
-          //           ))
-          //       : Container()
-          // ],
-        ),
-        drawer: DrawerWidget(),
-        floatingActionButton: GetPlatform.isAndroid
-            ? FloatingActionButton(child: Icon(MdiIcons.plus), onPressed: () {})
-            : null,
-        body: SafeArea(child: Text('LoseController')));
+      appBar: AppBar(
+        title: const Text("Objetos perdidos"),
+      ),
+      drawer: DrawerWidget(),
+      floatingActionButton: GetPlatform.isAndroid
+          ? FloatingActionButton(
+              child: const Icon(MdiIcons.plus),
+              onPressed: () {},
+            )
+          : null,
+      body: const SafeArea(
+        child: Text('LoseController'),
+      ),
+    );
   }
 }

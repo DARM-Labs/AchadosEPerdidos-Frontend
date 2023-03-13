@@ -13,7 +13,6 @@ class ObjectVerticalWidget extends StatelessWidget {
       height: 250,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        
         children: [
           Container(
             width: 250,

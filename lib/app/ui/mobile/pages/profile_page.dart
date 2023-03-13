@@ -1,8 +1,8 @@
 import 'package:achadoseperdidosifce/app/utils/variaveis.dart';
-import 'package:achadoseperdidosifce/app/ui/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../../controller/profile_controller.dart';
 import '../../widgets/photo_user_button_widget.dart';
@@ -12,12 +12,13 @@ class ProfilePage extends GetView<ProfileController> {
 
   @override
   Widget build(BuildContext context) {
-    final _alturaDisponivel = Variavel.alturaDisponivel(context);
+    final alturaDisponivel = Variavel.alturaDisponivel(context);
+    bool eye = true;
     return LayoutBuilder(
       builder: (context, constraints) {
         final maxWidth = constraints.maxWidth;
         return Scaffold(
-          drawer: DrawerWidget(),
+          // drawer: DrawerWidget(),
           appBar: AppBar(
             title: const Text('Perfil'),
             centerTitle: true,
@@ -28,7 +29,7 @@ class ProfilePage extends GetView<ProfileController> {
               child: Column(
                 children: [
                   Container(
-                    height: _alturaDisponivel * .38,
+                    height: alturaDisponivel * .38,
                     width: maxWidth,
                     decoration: BoxDecoration(
                       color: Get.theme.colorScheme.secondary,
@@ -39,7 +40,7 @@ class ProfilePage extends GetView<ProfileController> {
                       children: [
                         Padding(
                           padding:
-                              EdgeInsets.only(bottom: _alturaDisponivel * .04),
+                              EdgeInsets.only(bottom: alturaDisponivel * .04),
                           child: Form(
                             key: controller.formGlobalKey,
                             child: Obx(
@@ -52,7 +53,7 @@ class ProfilePage extends GetView<ProfileController> {
                           ),
                         ),
                         SizedBox(
-                          height: _alturaDisponivel * .06,
+                          height: alturaDisponivel * .06,
                           width: maxWidth * .60,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -120,8 +121,95 @@ class ProfilePage extends GetView<ProfileController> {
                     ),
                   ),
                   Container(
-                    
-                  )
+                    margin:
+                        EdgeInsets.symmetric(vertical: alturaDisponivel * .05),
+                    height: alturaDisponivel * .52,
+                    width: maxWidth * .80,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TextFormField(
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(
+                              MdiIcons.emailOutline,
+                              color: Colors.black,
+                            ),
+                            labelStyle: GoogleFonts.poppins(
+                              color: Colors.black,
+                            ),
+                            hintStyle: GoogleFonts.poppins(
+                              color: Colors.black,
+                            ),
+                            suffixIcon: GestureDetector(
+                              onTap: () {},
+                              child: const Icon(
+                                MdiIcons.pencilOutline,
+                              ),
+                            ),
+                            suffixIconColor: Get.theme.colorScheme.onBackground,
+                            focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(style: BorderStyle.none),
+                            ),
+                            enabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(style: BorderStyle.none),
+                            ),
+                            disabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(style: BorderStyle.none),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding:
+                              EdgeInsets.only(bottom: alturaDisponivel * .23),
+                          child: TextFormField(
+                            obscureText: eye,
+                            decoration: InputDecoration(
+                              prefixIcon: const Icon(
+                                MdiIcons.keyOutline,
+                                color: Colors.black,
+                              ),
+                              labelStyle: GoogleFonts.poppins(
+                                color: Colors.black,
+                              ),
+                              hintStyle: GoogleFonts.poppins(
+                                color: Colors.black,
+                              ),
+                              suffixIcon: GestureDetector(
+                                onTap: () {},
+                                child: const Icon(
+                                  MdiIcons.pencilOutline,
+                                ),
+                              ),
+                              suffixIconColor:
+                                  Get.theme.colorScheme.onBackground,
+                              focusedBorder: const OutlineInputBorder(
+                                borderSide: BorderSide(style: BorderStyle.none),
+                              ),
+                              enabledBorder: const OutlineInputBorder(
+                                borderSide: BorderSide(style: BorderStyle.none),
+                              ),
+                              disabledBorder: const OutlineInputBorder(
+                                borderSide: BorderSide(style: BorderStyle.none),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: alturaDisponivel * .08,
+                          width: maxWidth,
+                          child: ElevatedButton.icon(
+                            onPressed: () {},
+                            icon: Icon(
+                              MdiIcons.logout,
+                              color: Get.theme.colorScheme.onPrimary,
+                            ),
+                            label: const Text("Sair"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -14,8 +14,9 @@ void main() {
     initialRoute: Routes.SPLASH,
     defaultTransition: Transition.native,
     theme: appThemeData,
+    darkTheme: appDarkThemeData,
+    themeMode: ThemeMode.system,
     initialBinding: LoginBinding(),
     getPages: AppPages.pages,
-    
   ));
 }

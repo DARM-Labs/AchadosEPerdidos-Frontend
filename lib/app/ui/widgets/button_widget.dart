@@ -20,8 +20,8 @@ class ButtonWidget extends Container {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
       height: 50,
+      width: double.infinity,
       child: outlined == null
           ? ElevatedButton(
               onPressed: onPressed,

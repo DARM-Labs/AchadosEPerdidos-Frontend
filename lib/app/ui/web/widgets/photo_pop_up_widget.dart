@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:achadoseperdidosifce/app/ui/widgets/photo_user_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,7 +50,7 @@ class PhotoPopUpWidget extends StatelessWidget {
                   )
                 : Container())),
       ],
-      offset: Offset(200, 80),
+      offset: const Offset(200, 80),
       elevation: 0,
       tooltip: 'Editar foto',
       child: PhotoUserButtonWidget(

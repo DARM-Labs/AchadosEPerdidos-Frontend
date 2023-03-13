@@ -31,7 +31,7 @@ class DetailObject extends StatelessWidget {
                   child: Hero(
                     tag: tagHero,
                     child: FadeInImage(
-                      placeholder: const AssetImage("assets/image/fundo.png"),
+                      placeholder: const AssetImage("assets/images/fundo.png"),
                       fit: BoxFit.cover,
                       image: NetworkImage(
                         object.imageUrl,

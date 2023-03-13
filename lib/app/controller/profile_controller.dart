@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:achadoseperdidosifce/app/data/model/user_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';

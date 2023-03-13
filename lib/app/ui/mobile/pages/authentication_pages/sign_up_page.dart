@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import '../../../../controller/auth_controller/sign_up_controller.dart';
 import '../../../../utils/validators.dart';
 import '../../../widgets/button_widget.dart';
-import '../../../widgets/photo_user_button_widget.dart';
 import '../../../widgets/textField_widget.dart';
 
 class SignUpPage extends GetView<SignUpController> {
@@ -26,8 +25,6 @@ class SignUpPage extends GetView<SignUpController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Padding(padding: EdgeInsets.all(20)),
-                 
-             
                   TextFieldWidget(
                     label: 'Digite seu nome',
                     hintText: 'seu nome completo',
@@ -96,7 +93,7 @@ class SignUpPage extends GetView<SignUpController> {
                     label: 'Você é o que na instituição',
                     items: <String>[
                       'Discente',
-                      'Doscente',
+                      'Docente',
                       'TAFs (Comunidade externa)'
                     ].map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
@@ -110,17 +107,19 @@ class SignUpPage extends GetView<SignUpController> {
                     onChanged: (value) => controller.office(value),
                   ),
                   const Padding(padding: EdgeInsets.all(10)),
-                  Obx(() => controller.office.value == 'Discente'
-                      ? TextFieldWidget(
-                          label: 'Curso',
-                          hintText: 'qual seu curso?',
-                          onChanged: (value) => controller.user.curso,
-                          validator: (value) => Validators.combine([
-                            () => Validators.isNotEmpty(value),
-                          ]),
-                          textInputAction: TextInputAction.done,
-                        )
-                      : Container()),
+                  Obx(
+                    () => controller.office.value == 'Discente'
+                        ? TextFieldWidget(
+                            label: 'Curso',
+                            hintText: 'qual seu curso?',
+                            onChanged: (value) => controller.user.curso,
+                            validator: (value) => Validators.combine([
+                              () => Validators.isNotEmpty(value),
+                            ]),
+                            textInputAction: TextInputAction.done,
+                          )
+                        : Container(),
+                  ),
                   const Padding(padding: EdgeInsets.all(20)),
                   ButtonWidget(
                       title: 'finalizar',

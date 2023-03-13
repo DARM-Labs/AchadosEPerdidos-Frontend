@@ -5,9 +5,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:uuid/uuid.dart';
 
 class FirebaseStorageService extends GetxService {
-  
   Future<String> uploadPhotoUser({required String path}) async {
-    var uuid = Uuid().v4();
+    var uuid = const Uuid().v4();
     final FirebaseStorage storage = FirebaseStorage.instance;
     File file = File(path);
     try {

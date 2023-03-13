@@ -6,8 +6,11 @@ import 'package:google_fonts/google_fonts.dart';
 class ObjectVerticalWidget extends StatelessWidget {
   final FoundObjectModel object;
   final String tagHero;
-  const ObjectVerticalWidget(
-      {super.key, required this.object, required this.tagHero});
+  const ObjectVerticalWidget({
+    super.key,
+    required this.object,
+    required this.tagHero,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +19,10 @@ class ObjectVerticalWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>
-                DetailObject(object: object, tagHero: tagHero),
+            builder: (context) => DetailObject(
+              object: object,
+              tagHero: tagHero,
+            ),
           ),
         );
       },
@@ -31,15 +36,14 @@ class ObjectVerticalWidget extends StatelessWidget {
               width: 250,
               height: 150,
               decoration: BoxDecoration(
-                  color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8)),
+                color: const Color(0xFFD9D9D9),
+                borderRadius: BorderRadius.circular(8),
+              ),
               child: Hero(
                 tag: tagHero,
                 child: FadeInImage(
                   placeholder: const AssetImage("assets/images/fundo.png"),
-                  image: NetworkImage(
-                    object.imageUrl,
-                  ),
+                  image: NetworkImage(object.imageUrl),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -48,11 +52,12 @@ class ObjectVerticalWidget extends StatelessWidget {
             Text(
               object.name,
               style: GoogleFonts.quicksand(
-                  textStyle: const TextStyle(
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700),
+                textStyle: const TextStyle(
+                  overflow: TextOverflow.ellipsis,
+                ),
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+              ),
             ),
             Text(
               object.location,
