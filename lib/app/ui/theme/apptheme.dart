@@ -5,13 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 final ThemeData appThemeData = ThemeData(
   colorScheme: const ColorScheme(
     brightness: Brightness.light,
-    primary: Color(
-      0xFF379936,
-    ),
+    primary: Color(0xFF379936),
     onPrimary: Colors.white,
-    secondary: Color(
-      0xFF379936,
-    ),
+    secondary: Color(0xFF379936),
     onSecondary: Colors.white,
     background: Colors.white,
     onBackground: Colors.black,
@@ -19,6 +15,13 @@ final ThemeData appThemeData = ThemeData(
     onSurface: Colors.black,
     error: Color(0xFFFF0000),
     onError: Color(0xFFFF0000),
+  ),
+  appBarTheme: AppBarTheme(
+    titleTextStyle: GoogleFonts.quicksand(
+      fontSize: 14,
+      color: Colors.white,
+      fontWeight: FontWeight.w700,
+    ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
@@ -57,19 +60,22 @@ final ThemeData appThemeData = ThemeData(
       fontWeight: FontWeight.w200,
     ),
   ),
-  textTheme: TextTheme(bodyLarge: GoogleFonts.poppins()),
+  checkboxTheme: const CheckboxThemeData(
+    shape: CircleBorder(),
+    side: BorderSide(color: Colors.black),
+    splashRadius: 0,
+  ),
+  textTheme: TextTheme(
+    bodyLarge: GoogleFonts.poppins(),
+  ),
 );
 
 final ThemeData appDarkThemeData = ThemeData(
   colorScheme: const ColorScheme(
     brightness: Brightness.light,
-    primary: Color(
-      0xFF379936,
-    ),
+    primary: Color(0xFF379936),
     onPrimary: Colors.white,
-    secondary: Color(
-      0xFF379936,
-    ),
+    secondary: Color(0xFF379936),
     onSecondary: Colors.white,
     background: Colors.white,
     onBackground: Colors.black,
@@ -77,6 +83,13 @@ final ThemeData appDarkThemeData = ThemeData(
     onSurface: Colors.black,
     error: Color(0xFFFF0000),
     onError: Color(0xFFFF0000),
+  ),
+  appBarTheme: AppBarTheme(
+    titleTextStyle: GoogleFonts.quicksand(
+      fontSize: 14,
+      color: Colors.white,
+      fontWeight: FontWeight.w700,
+    ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
@@ -120,5 +133,11 @@ final ThemeData appDarkThemeData = ThemeData(
       fontWeight: FontWeight.w200,
     ),
   ),
-  textTheme: TextTheme(bodyLarge: GoogleFonts.poppins()),
+  checkboxTheme: const CheckboxThemeData(
+    shape: CircleBorder(),
+    side: BorderSide(color: Colors.black),
+  ),
+  textTheme: TextTheme(
+    bodyLarge: GoogleFonts.poppins(),
+  ),
 );

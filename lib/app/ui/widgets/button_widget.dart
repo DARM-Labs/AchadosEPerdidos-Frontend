@@ -13,7 +13,6 @@ class ButtonWidget extends Container {
 
   final String title;
   final void Function()? onPressed;
-  @override
   final EdgeInsets? margin;
   final bool? outlined;
 

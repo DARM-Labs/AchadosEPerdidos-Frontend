@@ -32,23 +32,25 @@ class PhotoPopUpWidget extends StatelessWidget {
             ),
           ),
         ),
-        PopupMenuItem(
+        if (onTapDelPhoto != null)
+          PopupMenuItem(
             padding: EdgeInsets.zero,
-            child: (onTapDelPhoto != null
-                ? ListTile(
-                    onTap: onTapDelPhoto,
-                    leading: Icon(
-                      MdiIcons.deleteOutline,
-                      size: 25,
-                      color: Get.theme.colorScheme.error,
-                    ),
-                    title: Text(
-                      'Remover foto',
-                      style: GoogleFonts.poppins(
-                          fontSize: 16, color: Get.theme.colorScheme.error),
-                    ),
-                  )
-                : Container())),
+            child: ListTile(
+              onTap: onTapDelPhoto,
+              leading: Icon(
+                MdiIcons.deleteOutline,
+                size: 25,
+                color: Get.theme.colorScheme.error,
+              ),
+              title: Text(
+                'Remover foto',
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: Get.theme.colorScheme.error,
+                ),
+              ),
+            ),
+          ),
       ],
       offset: const Offset(200, 80),
       elevation: 0,

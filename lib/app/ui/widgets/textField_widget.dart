@@ -14,7 +14,6 @@ class TextFieldWidget extends StatefulWidget {
   final TextInputAction? textInputAction;
   final void Function(String?)? onSaved;
   final bool? autofocus;
-  @override
   final EdgeInsets? margin;
   final TextAlign textAlign;
   final TextAlignVertical textAlignVertical;

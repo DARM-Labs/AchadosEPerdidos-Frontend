@@ -1,18 +1,12 @@
-import 'package:achadoseperdidosifce/app/controller/floating_button_controller.dart';
-import 'package:achadoseperdidosifce/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class FloatingButtonWidget extends StatefulWidget {
-  const FloatingButtonWidget({
-    super.key,
-  });
+import '../../controller/floating_button_controller.dart';
+import '../../routes/app_routes.dart';
 
-  @override
-  State<FloatingButtonWidget> createState() => _FloatingButtonWidgetState();
-}
+class FloatingButtonWidget extends StatelessWidget {
+  const FloatingButtonWidget({super.key});
 
-class _FloatingButtonWidgetState extends State<FloatingButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<FloatingButtonController>(
