@@ -1,6 +1,7 @@
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/about_page.dart';
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/add_found_page.dart';
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/add_loses_pages.dart';
+import 'package:achadoseperdidosifce/app/ui/mobile/pages/added_lost_object.dart';
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/authentication_pages/forgot_password_pages/insert_email_forgot_password_page.dart';
 
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/founds_objects_page.dart';
@@ -12,7 +13,7 @@ import '../bindings/auth_bindings/login_binding.dart';
 import '../bindings/home_binding.dart';
 import '../bindings/auth_bindings/sign_up_binding.dart';
 import '../bindings/profile_binding.dart';
-import '../ui/mobile/pages/added_found.dart';
+import '../ui/mobile/pages/added_found_page.dart';
 import '../ui/mobile/pages/authentication_pages/forgot_password_pages/check_code_forgot_password_page.dart';
 import '../ui/mobile/pages/authentication_pages/forgot_password_pages/new_password_forgot_password_page.dart';
 import '../ui/mobile/pages/authentication_pages/forgot_password_pages/success_forgot_password_page.dart';
@@ -92,6 +93,7 @@ abstract class AppPages {
     GetPage(
       name: Routes.ADDED_FOUND,
       page: () => const AddedFoundPage(),
-    )
+    ),
+    GetPage(name: Routes.ADDED_LOST_PAGES, page: () => const AddedLostObject(),)
   ];
 }

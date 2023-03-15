@@ -16,4 +16,5 @@ abstract class Routes {
   static const ADD_FOUNDS = '/add_founds';
   static const ADDED_FOUND = '/add_founds/added_founds';
   static const ADD_LOSES = '/add_loses';
+  static const ADDED_LOST_PAGES = '/add_losts/added_lost_page';
 }
