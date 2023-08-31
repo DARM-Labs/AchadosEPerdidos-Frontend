@@ -44,7 +44,7 @@ class ProfilePage extends GetView<ProfileController> {
                                   fontStyle: FontStyle.normal,
                                   fontSize: 14)),
                           const SizedBox(
-                            height: 5,
+                            height: 6,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
