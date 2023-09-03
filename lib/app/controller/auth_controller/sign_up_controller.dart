@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:achadoseperdidosifce/app/data/model/user_model.dart';
-import 'package:achadoseperdidosifce/app/ui/mobile/widgets/photo_modal_widget.dart';
+import 'package:achadoseperdidosifce/app/ui/widgets/photo_modal_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +17,7 @@ class SignUpController extends GetxController {
   final formGlobalKey = GlobalKey<FormState>();
 
   var user = UserModel();
-  
+
   var office = 'asdas'.obs;
 
   signUp() async {
@@ -29,6 +29,4 @@ class SignUpController extends GetxController {
       signUp();
     }
   }
-
-
 }

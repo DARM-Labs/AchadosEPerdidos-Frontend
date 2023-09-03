@@ -4,5 +4,6 @@
     "workbench.tree.renderIndentGuides": "onHover",
     "dart.showDevToolsDebugToolBarButtons": true,
     "liveshare.showInStatusBar": "always",
-    "editor.scrollbar.scrollByPage": false
+    "editor.scrollbar.scrollByPage": false,
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
