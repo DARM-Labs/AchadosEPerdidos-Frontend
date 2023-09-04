@@ -33,10 +33,10 @@ class ObjectVerticalWidget extends StatelessWidget {
             style: GoogleFonts.quicksand(
                 fontSize: 14, fontWeight: FontWeight.w700),
           ),
-          Text("fjsfiahsdhuaahdsihifd"),
+          const Text("fjsfiahsdhuaahdsihifd"),
           const Padding(padding: EdgeInsets.all(7)),
           Row(children: [
-            SizedBox(
+            const SizedBox(
               width: 24,
               height: 24,
               child: CircleAvatar(
