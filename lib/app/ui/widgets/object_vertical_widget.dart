@@ -1,10 +1,12 @@
+import 'package:achadoseperdidosifce/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class ObjectVerticalWidget extends StatelessWidget {
-  const ObjectVerticalWidget({super.key});
+  final int id;
+  const ObjectVerticalWidget({super.key, required this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +17,21 @@ class ObjectVerticalWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         
         children: [
-          Container(
-            width: 250,
-            height: 150,
-            decoration: BoxDecoration(
-                color: const Color(0xFFD9D9D9),
-                borderRadius: BorderRadius.circular(8)),
-            child: Icon(
-              MdiIcons.imageOutline,
-              size: 80,
-              color: Get.theme.colorScheme.background,
+          InkWell(
+            onTap: (){
+              Get.toNamed(Routes.OBJECT_DETAIL, arguments: id);
+            },
+            child: Container(
+              width: 250,
+              height: 150,
+              decoration: BoxDecoration(
+                  color: const Color(0xFFD9D9D9),
+                  borderRadius: BorderRadius.circular(8)),
+              child: Icon(
+                MdiIcons.imageOutline,
+                size: 80,
+                color: Get.theme.colorScheme.background,
+              ),
             ),
           ),
           const Padding(padding: EdgeInsets.all(4)),

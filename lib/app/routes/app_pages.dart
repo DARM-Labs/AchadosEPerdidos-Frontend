@@ -3,6 +3,7 @@ import 'package:achadoseperdidosifce/app/ui/mobile/pages/authentication_pages/fo
 
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/founds_objects_page.dart';
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/loses_objects_page.dart';
+import 'package:achadoseperdidosifce/app/ui/mobile/pages/object_detail_page.dart';
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/profile_page.dart';
 import 'package:get/get.dart';
 import '../bindings/auth_bindings/forgot_password_binding.dart';
@@ -62,6 +63,10 @@ abstract class AppPages {
     GetPage(
       name: Routes.FOUNDS_OBJECTS,
       page: () => const FoundsObjectsWidget(),
+    ),
+    GetPage(
+      name: Routes.OBJECT_DETAIL,
+      page: () => const ObjectDetailPage(),
     ),
     GetPage(name: Routes.ABOUT, page: () => AboutPage())
   ];

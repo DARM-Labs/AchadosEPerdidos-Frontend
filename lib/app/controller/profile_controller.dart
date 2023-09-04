@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import '../data/repository/profile_repository.dart';
-import '../ui/mobile/widgets/photo_modal_widget.dart';
+import '../ui/widgets/photo_modal_widget.dart';
 
 class ProfileController extends GetxController {
   final ProfileRepository repository;
