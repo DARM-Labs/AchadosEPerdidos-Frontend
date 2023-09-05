@@ -17,7 +17,7 @@ class SignUpController extends GetxController {
   final formGlobalKey = GlobalKey<FormState>();
 
   var user = UserModel();
-  
+
   var office = 'asdas'.obs;
 
   signUp() async {
@@ -29,6 +29,4 @@ class SignUpController extends GetxController {
       signUp();
     }
   }
-
-
 }
