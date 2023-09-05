@@ -9,6 +9,7 @@ class ButtonWidget extends Container {
     required this.onPressed,
     this.margin,
     this.outlined,
+    this.showIcon = false,
   });
 
   final String title;
@@ -16,6 +17,7 @@ class ButtonWidget extends Container {
   @override
   final EdgeInsets? margin;
   final bool? outlined;
+  final bool showIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +39,24 @@ class ButtonWidget extends Container {
                     fontWeight: FontWeight.w500,
                   )),
                 ),
-                child: Text(title),
-              )
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (showIcon)
+                      const Icon(
+                        Icons.logout,
+                        color: Colors.white,
+                      ), SizedBox(
+                        width: showIcon
+                            ? 10
+                            : 0),
+                    Text(title),
+                    SizedBox(
+                        width: showIcon
+                            ? 10
+                            : 0), // Espaço entre o ícone e o texto
+                  ],
+                ))
             : TextButton(
                 child: Text(title,
                     style: GoogleFonts.poppins(

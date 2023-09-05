@@ -24,7 +24,7 @@ class PhotoUserButtonWidget extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            backgroundColor: Get.theme.colorScheme.primary,
+            backgroundColor: const Color.fromRGBO(95, 208, 94, 1),
             foregroundColor: Get.theme.colorScheme.onPrimary,
             maxRadius: 55,
             foregroundImage:
