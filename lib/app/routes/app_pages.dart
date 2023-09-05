@@ -1,4 +1,5 @@
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/about_page.dart';
+import 'package:achadoseperdidosifce/app/ui/mobile/pages/add_found_object_page.dart';
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/authentication_pages/forgot_password_pages/insert_email_forgot_password_page.dart';
 
 import 'package:achadoseperdidosifce/app/ui/mobile/pages/founds_objects_page.dart';
@@ -62,6 +63,10 @@ abstract class AppPages {
     GetPage(
       name: Routes.FOUNDS_OBJECTS,
       page: () => const FoundsObjectsWidget(),
+    ),
+    GetPage(
+      name: Routes.FOUNDS_OBJECTS_ADD,
+      page: () => const AddFoundObjectPage(),
     ),
     GetPage(name: Routes.ABOUT, page: () => AboutPage())
   ];

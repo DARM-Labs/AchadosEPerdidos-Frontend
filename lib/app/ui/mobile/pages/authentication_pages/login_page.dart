@@ -1,13 +1,12 @@
+import 'package:achadoseperdidosifce/app/controller/auth_controller/login_controller.dart';
 import 'package:achadoseperdidosifce/app/routes/app_routes.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/button_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/logo_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/text_button_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/textField_widget.dart';
+import 'package:achadoseperdidosifce/app/utils/validators.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../../controller/auth_controller/login_controller.dart';
-import '../../../../utils/validators.dart';
 
 class LoginPage extends GetView<LoginController> {
   const LoginPage({super.key});
