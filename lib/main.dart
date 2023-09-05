@@ -16,6 +16,5 @@ void main() {
     theme: appThemeData,
     initialBinding: LoginBinding(),
     getPages: AppPages.pages,
-    
   ));
 }
