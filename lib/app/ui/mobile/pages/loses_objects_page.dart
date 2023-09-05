@@ -2,9 +2,10 @@ import 'package:achadoseperdidosifce/app/ui/widgets/object_vertical_widget.dart'
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import '../../../../controller/home_controller.dart';
-import '../../../../routes/app_routes.dart';
-import '../../../widgets/drawer_widget.dart';
+
+import '../../../controller/home_controller.dart';
+import '../../../routes/app_routes.dart';
+import '../../widgets/drawer_widget.dart';
 
 
 class LosesObjectsPage extends GetView<HomeController> {

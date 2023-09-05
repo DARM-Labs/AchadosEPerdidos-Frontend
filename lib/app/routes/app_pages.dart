@@ -10,6 +10,7 @@ import '../bindings/auth_bindings/login_binding.dart';
 import '../bindings/home_binding.dart';
 import '../bindings/auth_bindings/sign_up_binding.dart';
 import '../bindings/profile_binding.dart';
+import '../ui/mobile/pages/add_loses_objects_page.dart';
 import '../ui/mobile/pages/authentication_pages/forgot_password_pages/check_code_forgot_password_page.dart';
 import '../ui/mobile/pages/authentication_pages/forgot_password_pages/new_password_forgot_password_page.dart';
 import '../ui/mobile/pages/authentication_pages/forgot_password_pages/success_forgot_password_page.dart';
@@ -17,8 +18,7 @@ import '../ui/mobile/pages/authentication_pages/forgot_password_pages/success_fo
 import '../ui/mobile/pages/authentication_pages/login_page.dart';
 import '../ui/mobile/pages/authentication_pages/sign_up_page.dart';
 import '../ui/mobile/pages/home_page.dart';
-import '../ui/mobile/pages/loses_object_page/add_loses_objects_page.dart';
-import '../ui/mobile/pages/loses_object_page/loses_objects_page.dart';
+import '../ui/mobile/pages/loses_objects_page.dart';
 import '../ui/mobile/pages/splash_page.dart';
 import 'app_routes.dart';
 
