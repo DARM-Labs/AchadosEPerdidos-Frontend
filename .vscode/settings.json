@@ -4,5 +4,9 @@
     "workbench.tree.renderIndentGuides": "onHover",
     "dart.showDevToolsDebugToolBarButtons": true,
     "liveshare.showInStatusBar": "always",
-    "editor.scrollbar.scrollByPage": false
+    "editor.scrollbar.scrollByPage": false,
+    "workbench.colorCustomizations": {
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    }
 }
