@@ -11,53 +11,65 @@ class ObjectVerticalWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 250,
-      height: 250,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        
-        children: [
-          InkWell(
-            onTap: (){
-              Get.toNamed(Routes.OBJECT_DETAIL, arguments: id);
-            },
-            child: Container(
-              width: 250,
-              height: 150,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
               decoration: BoxDecoration(
                   color: const Color(0xFFD9D9D9),
-                  borderRadius: BorderRadius.circular(8)),
+                  borderRadius: BorderRadius.circular(100)),
+              width: 80,
+              height: 80,
               child: Icon(
                 MdiIcons.imageOutline,
-                size: 80,
+                size: 40,
                 color: Get.theme.colorScheme.background,
               ),
             ),
-          ),
-          const Padding(padding: EdgeInsets.all(4)),
-          Text(
-            "Garrafa azul Marinho",
-            style: GoogleFonts.quicksand(
-                fontSize: 14, fontWeight: FontWeight.w700),
-          ),
-          Text("fjsfiahsdhuaahdsihifd"),
-          const Padding(padding: EdgeInsets.all(7)),
-          Row(children: [
+            const SizedBox(
+              width: 8,
+            ),
             SizedBox(
-              width: 24,
-              height: 24,
-              child: CircleAvatar(
-                  foregroundImage: NetworkImage(
-                "https://cdn.pixabay.com/photo/2012/04/14/14/16/cubes-34080_1280.png",
-              )),
+              height: 80,
+              width: MediaQuery.of(context).size.width - 120,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Garrafa azul Marinho",
+                    style: GoogleFonts.quicksand(
+                        fontSize: 14, fontWeight: FontWeight.w700),
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.calendar_month_outlined, size: 12),
+                      Text(
+                        "12/02/2023",
+                        style: GoogleFonts.quicksand(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                            color: const Color.fromRGBO(51, 51, 51, 1)),
+                      ),
+                    ],
+                  ),
+                  Flexible(
+                    child: Text(
+                      "encontrada no laboratório 02 andar 1",
+                      style: GoogleFonts.quicksand(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            const Padding(padding: EdgeInsets.all(8)),
-            Text(
-              "Lucas Sales",
-              style: GoogleFonts.quicksand(fontSize: 14),
-            ),
-          ]),
-        ],
+          ],
+        ),
       ),
     );
   }

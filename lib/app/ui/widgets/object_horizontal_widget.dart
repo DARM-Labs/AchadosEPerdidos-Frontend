@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class ObjectVerticalWidget extends StatelessWidget {
-  const ObjectVerticalWidget({super.key});
+class ObjectHorizontalWidget extends StatelessWidget {
+  const ObjectHorizontalWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +33,10 @@ class ObjectVerticalWidget extends StatelessWidget {
             style: GoogleFonts.quicksand(
                 fontSize: 14, fontWeight: FontWeight.w700),
           ),
-          const Text("fjsfiahsdhuaahdsihifd"),
+          Text("fjsfiahsdhuaahdsihifd"),
           const Padding(padding: EdgeInsets.all(7)),
           Row(children: [
-            const SizedBox(
+            SizedBox(
               width: 24,
               height: 24,
               child: CircleAvatar(

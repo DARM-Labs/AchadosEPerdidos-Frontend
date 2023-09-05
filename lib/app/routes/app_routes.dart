@@ -16,6 +16,7 @@ abstract class Routes {
   static const PROFILE = '/profile';
   static const LOSES_OBJECTS = '/objects/loses';
   static const FOUNDS_OBJECTS = '/objects/founds';
+  static const FOUNDS_OBJECTS_ADD = '/objects/founds/add';
   static const OBJECT_DETAIL = '/object/detail';
   static const ABOUT = '/about';
 }

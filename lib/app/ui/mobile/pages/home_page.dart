@@ -1,5 +1,5 @@
 import 'package:achadoseperdidosifce/app/ui/widgets/drawer_widget.dart';
-import 'package:achadoseperdidosifce/app/ui/widgets/object_vertical_widget.dart';
+import 'package:achadoseperdidosifce/app/ui/widgets/object_horizontal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,7 +41,8 @@ class HomePage extends GetView<HomeController> {
                 child: ListView.separated(
                     padding: const EdgeInsets.only(top: 8, left: 15),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => ObjectVerticalWidget(id: index,),
+                    itemBuilder: (context, index) =>
+                        const ObjectHorizontalWidget(),
                     itemCount: 5,
                     separatorBuilder: (context, index) =>
                         const Padding(padding: EdgeInsets.all(16))),
@@ -60,7 +61,8 @@ class HomePage extends GetView<HomeController> {
                 child: ListView.separated(
                     padding: const EdgeInsets.only(top: 8, left: 15),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => ObjectVerticalWidget(id: index,),
+                    itemBuilder: (context, index) =>
+                        const ObjectHorizontalWidget(),
                     itemCount: 5,
                     separatorBuilder: (context, index) =>
                         const Padding(padding: EdgeInsets.all(16))),
