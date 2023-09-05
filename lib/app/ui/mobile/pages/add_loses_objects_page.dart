@@ -34,21 +34,12 @@ class _AddLosesObjectsPageState extends State<AddLosesObjectsPage> {
   Widget build(BuildContext context) {
     if (page == "initial") {
       return Scaffold(
-        appBar: AppBar(
-          title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Adicionar Objetos",
-                style: GoogleFonts.poppins(
-                    fontSize: 14, fontWeight: FontWeight.w500),
-              ),
-              Text(
-                "perdido",
-                style: GoogleFonts.poppins(
-                    fontSize: 14, fontWeight: FontWeight.w500),
-              ),
-            ],
+       appBar: AppBar(
+          title: const AppBarTextObjectWidget(
+            subtitle: "Perdido",
+          ),
+          leading: AppBarLeadingObjectWidget(
+            onTap: () => Navigator.pop(context),
           ),
         ),
         body: SafeArea(
@@ -96,7 +87,7 @@ class _AddLosesObjectsPageState extends State<AddLosesObjectsPage> {
                       const SizedBox(
                         height: 15,
                       ),
-                      Row(
+                      Row( 
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
