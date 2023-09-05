@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
-import '../../controller/home_controller.dart';
 import '../../routes/app_routes.dart';
 import 'avatar_widget.dart';
 
@@ -20,8 +18,7 @@ class DrawerWidget extends Drawer {
     return Drawer(
       backgroundColor: Get.theme.colorScheme.background,
       surfaceTintColor: Get.theme.colorScheme.onBackground,
-      child: Expanded(
-        child: ListView(children: [
+      child:ListView(children: [
           GestureDetector(
             onTap: () => selectPage(Routes.PROFILE),
             child: UserAccountsDrawerHeader(
@@ -142,7 +139,7 @@ class DrawerWidget extends Drawer {
             textColor: Get.theme.colorScheme.error,
           ),
         ]),
-      ),
+      
     );
   }
 }

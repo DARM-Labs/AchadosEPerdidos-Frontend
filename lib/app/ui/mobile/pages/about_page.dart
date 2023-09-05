@@ -12,8 +12,7 @@ class AboutPage extends GetView {
     return Scaffold(
         appBar: AppBar(title: const Text('Sobre')),
         body: SafeArea(
-            child: Expanded(
-                child: Column(
+            child: Column(
           children: [
             const SizedBox(
               height: 60,
@@ -37,13 +36,14 @@ class AboutPage extends GetView {
               height: 16,
             ),
             Text(
-              "Projeto feito em parceria com o grupo\n    GDPPI junto ao Darm Lab e o IFCE ",
+              "Projeto feito em parceria com o grupo\nGDPPI junto ao Darm Lab e o IFCE ",
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                   fontSize: 14),
+                  textAlign: TextAlign.center,
             )
           ],
-        ))));
+        )));
   }
 }
