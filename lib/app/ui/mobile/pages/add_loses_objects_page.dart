@@ -1,4 +1,3 @@
-import 'package:achadoseperdidosifce/app/controller/add_found_controller.dart';
 import 'package:achadoseperdidosifce/app/routes/app_routes.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/app_bar_leading_object_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/app_bar_text_object_widget.dart';
@@ -10,6 +9,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import '../../../controller/add_lose_controller.dart';
 
 class AddLosesObjectsPage extends StatefulWidget {
   const AddLosesObjectsPage({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class AddLosesObjectsPage extends StatefulWidget {
 }
 
 class _AddLosesObjectsPageState extends State<AddLosesObjectsPage> {
-  final AddFoundController controller = AddFoundController();
+  final AddLoseController controller = AddLoseController();
   File? image;
 
   String page = "initial";
@@ -88,81 +88,86 @@ class _AddLosesObjectsPageState extends State<AddLosesObjectsPage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Foto Opcional",
-                          style: GoogleFonts.poppins(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey,
+                child: Form(
+                  key: controller.formGlobalKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Foto Opcional",
+                            style: GoogleFonts.poppins(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey,
+                            ),
                           ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 38,
+                      ),
+                      Text(
+                        "Digite o nome do objeto perdido",
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
                         ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 38,
-                    ),
-                    Text(
-                      "Digite o nome do objeto perdido",
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                       ),
-                    ),
-                    Text(
-                      "ex: garrafa azul",
-                      style: GoogleFonts.poppins(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
-                        color: const Color.fromARGB(180, 158, 158, 158),
+                      Text(
+                        "ex: garrafa azul",
+                        style: GoogleFonts.poppins(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w400,
+                          color: const Color.fromARGB(180, 158, 158, 158),
+                        ),
                       ),
-                    ),
-                    TextFieldWidget(
-                      validator: (value) => Validators.combine([
-                        () => Validators.isNotEmpty(value),
-                        () => Validators.isEmail(value)
-                      ]),
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    Text(
-                      "Ultimo local visto",
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
+                      TextFieldWidget(
+                        onChanged: (value) => controller.name(value),
+                        validator: (value) => Validators.combine([
+                          () => Validators.isNotEmpty(value),
+                          () => Validators.isEmail(value)
+                        ]),
                       ),
-                    ),
-                    Text(
-                      "ex: na arquibancada da quadra",
-                      style: GoogleFonts.poppins(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
-                        color: const Color.fromARGB(180, 158, 158, 158),
+                      const SizedBox(
+                        height: 16,
                       ),
-                    ),
-                    TextFieldWidget(
-                      validator: (value) => Validators.combine([
-                        () => Validators.isNotEmpty(value),
-                        () => Validators.isEmail(value)
-                      ]),
-                    ),
-                    const SizedBox(
-                      height: 32,
-                    ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: ButtonWidget(title: 'Publicar', onPressed: save),
-                    ),
-                  ],
+                      Text(
+                        "Ultimo local visto",
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      Text(
+                        "ex: na arquibancada da quadra",
+                        style: GoogleFonts.poppins(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w400,
+                          color: const Color.fromARGB(180, 158, 158, 158),
+                        ),
+                      ),
+                      TextFieldWidget(
+                        onChanged: (value) => controller.location(value),
+                        validator: (value) => Validators.combine([
+                          () => Validators.isNotEmpty(value),
+                          () => Validators.isEmail(value)
+                        ]),
+                      ),
+                      const SizedBox(
+                        height: 32,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: ButtonWidget(title: 'Publicar', onPressed: save),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
