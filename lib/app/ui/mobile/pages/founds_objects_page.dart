@@ -18,7 +18,7 @@ class FoundsObjectsWidget extends StatelessWidget {
       body: SafeArea(
         child: ListView.separated(
             padding: const EdgeInsets.only(top: 20, bottom: 20),
-            itemBuilder: (context, index) => const ObjectVerticalWidget(),
+            itemBuilder: (context, index) => ObjectVerticalWidget(id: index,),
             itemCount: 10,
             separatorBuilder: (context, index) =>
                 const Padding(padding: EdgeInsets.all(10))),
