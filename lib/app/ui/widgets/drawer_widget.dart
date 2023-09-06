@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
-import '../../controller/home_controller.dart';
 import '../../routes/app_routes.dart';
 import 'avatar_widget.dart';
 
