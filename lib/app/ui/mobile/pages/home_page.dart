@@ -46,7 +46,8 @@ class HomePage extends GetView<HomeController> {
                 child: ListView.separated(
                     padding: const EdgeInsets.only(top: 8, left: 15, right: 15),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const ObjectHorizontalWidget(),
+                    itemBuilder: (context, index) =>
+                        ObjectHorizontalWidget(id: index,),
                     itemCount: 5,
                     separatorBuilder: (context, index) =>
                         const Padding(padding: EdgeInsets.all(16))),
@@ -65,7 +66,8 @@ class HomePage extends GetView<HomeController> {
                 child: ListView.separated(
                     padding: const EdgeInsets.only(top: 8, left: 15, right: 15),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => const ObjectHorizontalWidget(),
+                    itemBuilder: (context, index) =>
+                        ObjectHorizontalWidget(id: index,),
                     itemCount: 5,
                     separatorBuilder: (context, index) =>
                         const Padding(padding: EdgeInsets.all(16))),
