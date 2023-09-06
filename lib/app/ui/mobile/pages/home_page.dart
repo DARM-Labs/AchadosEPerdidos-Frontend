@@ -1,10 +1,9 @@
+import 'package:achadoseperdidosifce/app/controller/home_controller.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/drawer_widget.dart';
 import 'package:achadoseperdidosifce/app/ui/widgets/object_horizontal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../../controller/home_controller.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
@@ -16,9 +15,15 @@ class HomePage extends GetView<HomeController> {
         appBar: AppBar(
           title: SizedBox(
             height: 50,
-            child: Image.asset(
-              'assets/images/logo_img.png',
-              color: Colors.white,
+            width: MediaQuery.of(context).size.width-150,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/logo_img.png',
+                  color: Colors.white,
+                ),
+              ],
             ),
           ),
         ),
@@ -39,7 +44,7 @@ class HomePage extends GetView<HomeController> {
                 height: 250,
                 width: double.infinity,
                 child: ListView.separated(
-                    padding: const EdgeInsets.only(top: 8, left: 15),
+                    padding: const EdgeInsets.only(top: 8, left: 15, right: 15),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) => const ObjectHorizontalWidget(),
                     itemCount: 5,
@@ -58,7 +63,7 @@ class HomePage extends GetView<HomeController> {
                 height: 250,
                 width: double.infinity,
                 child: ListView.separated(
-                    padding: const EdgeInsets.only(top: 8, left: 15),
+                    padding: const EdgeInsets.only(top: 8, left: 15, right: 15),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) => const ObjectHorizontalWidget(),
                     itemCount: 5,
@@ -66,7 +71,7 @@ class HomePage extends GetView<HomeController> {
                         const Padding(padding: EdgeInsets.all(16))),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 16, top: 60, bottom: 54),
+                padding: const EdgeInsets.only(left: 16, top: 30, bottom: 54),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

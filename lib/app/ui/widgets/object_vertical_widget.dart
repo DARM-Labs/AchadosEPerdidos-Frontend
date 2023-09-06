@@ -31,7 +31,7 @@ class ObjectVerticalWidget extends StatelessWidget {
             ),
             SizedBox(
               height: 80,
-              width: MediaQuery.of(context).size.width-120,
+              width: MediaQuery.of(context).size.width - 120,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
