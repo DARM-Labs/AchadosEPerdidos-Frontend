@@ -32,17 +32,36 @@ class ObjectVerticalWidget extends StatelessWidget {
                   color: Get.theme.colorScheme.background,
                 ),
               ),
-              const SizedBox(
-                width: 8,
-              ),
-              SizedBox(
-                height: 80,
-                width: MediaQuery.of(context).size.width - 120,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Garrafa azul Marinho",
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+            SizedBox(
+              height: 80,
+              width: MediaQuery.of(context).size.width - 120,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Garrafa azul Marinho",
+                    style: GoogleFonts.quicksand(
+                        fontSize: 14, fontWeight: FontWeight.w700),
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.calendar_month_outlined, size: 12),
+                      Text(
+                        "12/02/2023",
+                        style: GoogleFonts.quicksand(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w400,
+                            color: const Color.fromRGBO(51, 51, 51, 1)),
+                      ),
+                    ],
+                  ),
+                  Flexible(
+                    child: Text(
+                      "encontrada no laboratório 02 andar 1",
                       style: GoogleFonts.quicksand(
                           fontSize: 14, fontWeight: FontWeight.w700),
                     ),

@@ -15,7 +15,6 @@ class ObjectHorizontalWidget extends StatelessWidget {
       height: 250,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        
         children: [
           InkWell(
             onTap: (){
@@ -36,14 +35,30 @@ class ObjectHorizontalWidget extends StatelessWidget {
           ),
           const Padding(padding: EdgeInsets.all(4)),
           Text(
-            "Garrafa azul Marinho",
+            "Garrafa azul Marinho Garrafa azul Marinho Garrafa azul Marinho",
             style: GoogleFonts.quicksand(
-                fontSize: 14, fontWeight: FontWeight.w700),
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              textStyle: const TextStyle(
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            maxLines: 1,
           ),
-          Text("fjsfiahsdhuaahdsihifd"),
+          Text(
+            "encontrada no laboratório 02 andar 1 encontrada no laboratório 02 andar 1 encontrada no laboratório 02 andar 1",
+            style: GoogleFonts.quicksand(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              textStyle: const TextStyle(
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            maxLines: 1,
+          ),
           const Padding(padding: EdgeInsets.all(7)),
           Row(children: [
-            SizedBox(
+            const SizedBox(
               width: 24,
               height: 24,
               child: CircleAvatar(
@@ -52,9 +67,33 @@ class ObjectHorizontalWidget extends StatelessWidget {
               )),
             ),
             const Padding(padding: EdgeInsets.all(8)),
+            SizedBox(
+              width: 150,
+              child: Text(
+                "Lucas Sales Lucas Sales Lucas Sales",
+                style: GoogleFonts.quicksand(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  textStyle: const TextStyle(
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                maxLines: 1,
+              ),
+            ),
+            const Padding(padding: EdgeInsets.all(5)),
+            const Icon(
+              Icons.mode_comment_outlined,
+              size: 14,
+              color: Color.fromRGBO(51, 51, 51, 1),
+            ),
+            const Padding(padding: EdgeInsets.all(2)),
             Text(
-              "Lucas Sales",
-              style: GoogleFonts.quicksand(fontSize: 14),
+              "2+",
+              style: GoogleFonts.quicksand(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ]),
         ],
